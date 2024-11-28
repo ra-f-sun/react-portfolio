@@ -1,0 +1,56 @@
+/* Common css starts here */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 0.8;
+}
+
+.admin-dashboard{
+  display: flex
+}
+
+.admin-option{
+  width: 20%;
+  height: 100vh;
+  background-color: rgb(8, 95, 95);
+}
+
+.admin-option ul li{
+  list-style: none;
+  padding:10px;
+  background-color: rgb(8, 95, 95);
+  color: rgb(255, 255, 231);
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+
+.admin-option ul li:hover{
+  background-color: rgb(19, 133, 133);;
+}
+
+.admin-views{
+  width: 80%; 
+  background-color: rgb(255, 255, 255);
+}
+
+/* nav css starts here */

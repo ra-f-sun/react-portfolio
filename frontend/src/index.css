@@ -43,11 +43,11 @@ p {
   align-items: center;
 }
 
-.list-items {
+.menu-items {
   display: flex;
 }
 
-.list-items li {
+.menu-items li {
   color: #000;
   margin: 0 16px;
   text-transform: capitalize;

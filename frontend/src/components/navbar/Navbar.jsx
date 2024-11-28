@@ -1,4 +1,22 @@
+import { useEffect } from "react";
+import axios from 'axios'
+import { useState } from "react";
+
 const Navbar = () => {
+  let [list,setList] = useState([])
+
+  useEffect(()=>{
+    async function fetchData(){
+      let data = await axios.get('http://localhost:3000/navitem')  
+      console.log(data.data.menuItem);
+      
+      console.log(data.data.menuItem.split(","));
+       
+      setList(data.data.menuItem.split(","));
+    }
+    fetchData()
+  },[])
+
   return (
     <nav id="navbar">
       <div className="container">
@@ -6,34 +24,13 @@ const Navbar = () => {
           <a href="#">
             <img src="images/Logo.png" alt="" />
           </a>
-          <ul className="list-items">
-            <a href="#">
+          <ul className="menu-items">
+            {list.map((item)=>(
+              <a href="#">
               {" "}
-              <li>home</li>{" "}
+              <li>{item}</li>{" "}
             </a>
-            <a href="#">
-              {" "}
-              <li>about</li>{" "}
-            </a>
-            <a href="#">
-              {" "}
-              <li>resume</li>{" "}
-            </a>
-            <a href="#">
-              {" "}
-              <li>services</li>{" "}
-            </a>
-            <a href="#">
-              {" "}
-              <li>portfolio</li>{" "}
-            </a>
-            <a href="#">
-              {" "}
-              <li>testimonial</li>{" "}
-            </a>
-            <a href="#">
-              <li>blog</li>
-            </a>
+            ))}  
           </ul>
           <div className="nav-btn">contact us</div>
         </div>
