@@ -19,8 +19,16 @@ app.post("/navbar", function (req, res) {
 });
 
 app.get("/navitem",async function(req,res){
-  let data = await Navbar.findOne()
+  let data = await Navbar.findOne({})
   res.send(data)
 })
+
+app.put("/navbar/:id", function (req, res) {
+  console.log(req.params.id)
+  console.log(req.body);
+  Navbar.findByIdAndUpdate(req.params.id,req.body).then(()=>{
+    res.send({message: "navbar updated"})
+  })
+});
 
 app.listen(3000);
