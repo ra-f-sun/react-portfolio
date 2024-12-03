@@ -54,3 +54,119 @@ p {
 }
 
 /* nav css starts here */
+.nav-container {
+  width: 300px; /* Adjust as needed */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.nav-container h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+.nav-container input[type="file"] {
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+}
+
+.nav-container input[type="text"] {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.nav-container input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.nav-container button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.nav-container button:hover {
+  background-color: #0056b3;
+}
+
+.nav-container br {
+  line-height: 1.5;
+}
+/* Nav css ends here */
+
+/* hero css starts here */
+.hero-container {
+  width: 400px; /* Adjust based on your design */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4; /* Light background */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  text-align: center; /* Center-align content */
+}
+
+.hero-container h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hero-container input[type="file"] {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.hero-container input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.hero-container button {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.hero-container button:hover {
+  background-color: #0056b3;
+}
+
+.hero-container br {
+  line-height: 1.6; /* Add spacing between elements */
+}
+
+/* hero css ends here */

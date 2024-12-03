@@ -28,6 +28,7 @@ const Navbar = () => {
           </a>
           <ul className="menu-items">
             {menuItem.map((item)=>(
+              // eslint-disable-next-line react/jsx-key
               <a href="#">
               {" "}
               <li>{item}</li>{" "}

@@ -54,7 +54,7 @@ p {
 }
 .nav-btn {
   height: 50px;
-  width: 163px;
+  /* width: 163px; */
   text-transform: capitalize;
   color: #fff;
   background-color: #ff6800;

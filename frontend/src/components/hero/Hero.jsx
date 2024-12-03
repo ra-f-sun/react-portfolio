@@ -1,4 +1,22 @@
+import { useState,useEffect } from "react";
+import axios from "axios"
+
 const Hero = () => {
+  const [subHeading, setSubHeading]=useState("")
+  const [heading,setHeading]=useState("")
+  const [bodyText,setBodyText]=useState("")
+  const [buttonText, setButtonText]=useState("")
+
+  useEffect(()=>{async function fetchData(){
+    let data= await axios.get("http://localhost:3000/heroitem")
+    setSubHeading(data.data.subHeading)
+    setHeading(data.data.heading)
+    setBodyText(data.data.bodyText)
+    setButtonText(data.data.buttonText)
+  }
+  fetchData()
+    
+  },[])
   return (
     <section id="hero">
       <div className="container">
@@ -7,15 +25,12 @@ const Hero = () => {
             <div className="outer-circle">
               <div className="inner-circle"></div>
             </div>
-            <span>I AM A DESIGNER</span>
-            <h1>Creative Design and Web Solutions</h1>
+            <span>{subHeading}</span>
+            <h1>{heading}</h1>
             <p>
-              Nam libero tempore, cum soluta nobis est eligendi optio cumque
-              nihil impedit quo minus id quod maxime placeat facere possimus,
-              omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
-              autem quibusdam et.
+              {bodyText}
             </p>
-            <div className="hero-btn">download my cv</div>
+            <div className="hero-btn">{buttonText}</div>
           </div>
           <div className="hero-img">
             <img src="images/hero-img.jpg" alt="hero-img.jpg" />

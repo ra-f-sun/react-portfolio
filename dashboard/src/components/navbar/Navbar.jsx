@@ -64,7 +64,7 @@ const Navbar = () => {
 
   return (
     <div className='nav-container'>
-      <h4>Input your logo</h4>
+      <h4>Navbar Section</h4>
       <input type="file" /><br />
       <input value={menuItem} onChange={handleMenuItemChange} type="text" placeholder="menu item"/><br />
       <input value={buttonText} onChange={handleButtonTextChange} type="text" placeholder="button text"/><br />

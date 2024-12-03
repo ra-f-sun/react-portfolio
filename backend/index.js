@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors')
 const mongoose = require('mongoose');
 const Navbar = require('./model/navbarModel')
+const Hero = require('./model/heroModel')
 
 mongoose.connect('mongodb+srv://1999rafsun:JUHP6XuOMK5EUqpe@cluster0.dzkic.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => console.log('Connected!'));
@@ -10,6 +11,7 @@ mongoose.connect('mongodb+srv://1999rafsun:JUHP6XuOMK5EUqpe@cluster0.dzkic.mongo
 app.use(cors())
 app.use(express.json())
 
+// navbar methods started
 app.post("/navbar", function (req, res) {
   console.log(req.body);
   let data=new Navbar(req.body)
@@ -23,6 +25,7 @@ app.get("/navitem",async function(req,res){
   res.send(data)
 })
 
+
 app.put("/navbar/:id", function (req, res) {
   console.log(req.params.id)
   console.log(req.body);
@@ -30,5 +33,30 @@ app.put("/navbar/:id", function (req, res) {
     res.send({message: "navbar updated"})
   })
 });
+
+// navbar methods ending
+
+// hero methods starting
+app.post("/hero", function (req, res) {
+  console.log(req.body);
+  let data=new Hero(req.body)
+  data.save()
+  res.send(data)  
+});
+
+app.get("/heroitem", async function (req,res) {
+  let data = await Hero.findOne({})
+  res.send(data)
+})
+
+app.put("/hero/:id", function (req, res) {
+  console.log(req.params.id)
+  console.log(req.body);
+  Hero.findByIdAndUpdate(req.params.id,req.body).then(()=>{
+    res.send({message: "Hero Updated"})
+  })
+});
+
+// hero methods ending
 
 app.listen(3000);

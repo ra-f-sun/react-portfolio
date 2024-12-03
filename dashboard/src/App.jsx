@@ -2,6 +2,16 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/navbar/Navbar'
+import Hero from "./components/hero/Hero";
+import About from "./components/about/About";
+import Service from "./components/service/Service";
+import Experience from "./components/experience/Experience";
+import Portfolio from "./components/portfolio/Portfolio";
+import Testimonial from "./components/testimonial/Testimonial";
+import Partner from "./components/partner/Partner";
+import Blog from "./components/blog/Blog";
+import ContactForm from "./components/contactForm/ContactForm";
+import Footer from "./components/footer/Footer";
 
 function App() {
   let [activeMenu, setActiveMenu]=useState('Navbar')
@@ -29,16 +39,16 @@ function App() {
       </div>
       <div className="admin-views">
         {activeMenu=='Navbar' && <Navbar/>}
-        {activeMenu=='Hero' && <h1>Hero</h1>}
-        {activeMenu=='About' && <h1>About</h1>}
-        {activeMenu=='Service' && <h1>Service</h1>}
-        {activeMenu=='Experience' && <h1>Experience</h1>}
-        {activeMenu=='Portfolio' && <h1>Portfolio</h1>}
-        {activeMenu=='Testimonial' && <h1>Testimonial</h1>}
-        {activeMenu=='Partner' && <h1>Partner</h1>}
-        {activeMenu=='Blog' && <h1>Blog</h1>}
-        {activeMenu=='ContactForm' && <h1>ContactForm</h1>}
-        {activeMenu=='Footer' && <h1>Footer</h1>}
+        {activeMenu=='Hero' && <Hero />}
+        {activeMenu=='About' && <About/>}
+        {activeMenu=='Service' && <Service/>}
+        {activeMenu=='Experience' && <Experience/>}
+        {activeMenu=='Portfolio' && <Portfolio/>}
+        {activeMenu=='Testimonial' && <Testimonial/>}
+        {activeMenu=='Partner' && <Partner/>}
+        {activeMenu=='Blog' && <Blog/>}
+        {activeMenu=='ContactForm' && <ContactForm/>}
+        {activeMenu=='Footer' && <Footer/>}
       </div>
       
     </div>
