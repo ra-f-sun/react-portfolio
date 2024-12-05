@@ -4,6 +4,7 @@ const cors = require('cors')
 const mongoose = require('mongoose');
 const Navbar = require('./model/navbarModel')
 const Hero = require('./model/heroModel')
+const Service = require('./model/serviceModel')
 
 mongoose.connect('mongodb+srv://1999rafsun:JUHP6XuOMK5EUqpe@cluster0.dzkic.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => console.log('Connected!'));
@@ -58,5 +59,30 @@ app.put("/hero/:id", function (req, res) {
 });
 
 // hero methods ending
+// service methods
+app.post("/service", function (req, res){
+  console.log(req.body);
+  let data = new Service(req.body)
+  data.save()
+  res.send({message: "service created"})
+})
 
+app.get("/service", async function (req, res) {
+  let data = await Service.find({})
+  console.log(data)
+  res.send(data)  
+})
+
+app.delete("/service/:id", async function(req,res){
+  let data = await Service.findByIdAndDelete(req.params.id)
+  res.send({message: "Service deleted"})
+})
+
+// app.put("/service/:id", function(req,res){
+//   Service.findByIdAndUpdate(req.params.id,req.body).then(()=>{
+//     res.send({message: "service updated"})
+//   })
+// })
+
+// service methods
 app.listen(3000);

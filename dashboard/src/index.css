@@ -170,3 +170,101 @@ p {
 }
 
 /* hero css ends here */
+
+/* service css */
+.service-container {
+  max-width: 400px; /* Limit the width for better readability */
+  margin: 20px auto; /* Center the container */
+  padding: 20px; /* Add padding for spacing */
+  border: 1px solid #ccc; /* Light border around the section */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Subtle background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+  font-family: Arial, sans-serif; /* Use a clean font */
+}
+
+.service-container h4 {
+  margin-bottom: 16px; /* Add space below the heading */
+  text-align: center; /* Center the heading text */
+  color: #333; /* Set text color */
+}
+
+.service-container input[type="file"] {
+  margin-bottom: 16px; /* Add spacing below the file input */
+}
+
+.service-container input[type="text"] {
+  width: 100%; /* Make the input field take the full width of the container */
+  padding: 10px; /* Add padding for better usability */
+  margin-bottom: 16px; /* Add spacing between inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.service-container button {
+  width: 100%; /* Button spans full width */
+  padding: 10px; /* Add padding for usability */
+  background-color: #007BFF; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Increase font size */
+}
+
+.service-container button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.service-container input[type="file"]:focus,
+.service-container input[type="text"]:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #007BFF; /* Highlight border on focus */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Add shadow effect */
+}
+
+table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    table th {
+      background-color: #f4f4f4;
+    }
+    table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    table tr:hover {
+      background-color: #f1f1f1;
+    }
+    .action-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .action-buttons button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .update-btn {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .delete-btn {
+      background-color: #f44336;
+      color: white;
+    }
+    .update-btn:hover {
+      background-color: #45a049;
+    }
+    .delete-btn:hover {
+      background-color: #e53935;
+    }
+/* service css */
